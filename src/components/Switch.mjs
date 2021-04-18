@@ -1,3 +1,15 @@
+const Switch = (targetElement, state) => {
+    const element = targetElement.cloneNode(true);
+
+    element.addEventListener('click', () => {
+        state.colorMode
+            ? document.documentElement.setAttribute('color-mode', 'dark')
+            : document.documentElement.setAttribute('color-mode', 'light');
+    });
+
+    return element;
+};
+
 const Switch = function ({ $target }) {
     this.state = {
         darkMode: false,

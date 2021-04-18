@@ -6,22 +6,57 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="index.css"></link>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@3.1.0/dist/chart.min.js"></script>
     </head>
     <body>
-        <div id="App"></div>
-        <template id="price_result">
-            <div class="">
-                <div class="img">
-                    <img src="">
-                </div>
-                <div class="title">
-
-                </div>
-                <div class="mall">
-
+        <div id="root">
+            <button id="btDarkMode">
+                다크모드
+            </button>
+            <div class="Header">
+                가격 꽉잡아!
+            </div>
+            <div class="Terms" data-component="terms">
+            </div>
+            <div class="Results" data-component="results">
+                <div class="price_result">
+                    <div class="price_overview">
+                        <div class="price_thumb">
+                            <img src=${imgUrl}>
+                        </div>
+                        <div class="price_info">
+                            <div class="price_title">
+                                ${title}
+                            </div>
+                            <div class="price_price">
+                                <span class="price_last_price">100 원</span>
+                                ▶
+                                <span class="price_current_price">1000 원</span>
+                            </div>
+                        </div>
+                        <div class="price_mall">
+                            <a target="_" href="${mallUrl}">
+                                <div>
+                                    👉
+                                </div>
+                            </a>
+                            <a target="_" href="${mallUrl}">
+                                <div>
+                                    💬
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </template>
+        </div>
+        <footer>
+            <a href="https://github.com/dorage" target="_blank">
+                <img link src="resource/GitHub-Mark-32px.png">
+            </a>
+            @dorage
+        </footer>
         <script type="module" src="src/index.mjs"></script>
     </body>
 </html>
